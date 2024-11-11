@@ -1,7 +1,7 @@
 package edu.pitt.cs;
 
 import org.mockito.Mockito;
-import static org.mockito.Mockito.*; 
+import static org.mockito.Mockito.*;
 
 public interface RentACat {
 	public static RentACat createInstance(InstanceType type) {
@@ -14,7 +14,8 @@ public interface RentACat {
 				return new RentACatSolution();
 			case MOCK:
 				// TODO: Return a mock object that emulates the behavior of a real object.
-				return null;
+				RentACat mockRentACat = Mockito.mock(RentACat.class);
+				return mockRentACat;
 			default:
 				assert (false);
 				return null;
